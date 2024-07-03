@@ -48,12 +48,14 @@ async function performSearchCharacter(query) {
             const characterCard = document.createElement('div');
             characterCard.classList.add('cardCharacter');
             characterCard.innerHTML = `
-                <img src="${character.image}" alt="${character.name}">
-                <h2>${character.name}</h2>
-                <p>Status: ${character.status}</p>
-                <p>Species: ${character.species}</p>
-                <p>Gender: ${character.gender}</p>
-                <button class="open-btn" onclick="showModal('character', ${character.id})">Details</button>
+                <div class="image-container">
+                    <img src="${character.image}" alt="${character.name}">
+                    <div class="overlay"></div>
+                    <div class="text-overlay">
+                        <h2>${character.name}</h2>
+                        <button class="open-btn" onclick="showModal('character', ${character.id})">Details</button>
+                    </div>
+                </div>
             `;  
             displayCharacter.appendChild(characterCard);
         });
@@ -118,12 +120,14 @@ async function fetchAndDisplayCharacters(query) {
             const characterCard = document.createElement('div');
             characterCard.classList.add('cardCharacter');
             characterCard.innerHTML = `
-                <img src="${character.image}" alt="${character.name}">
-                <h2>${character.name}</h2>
-                <p>Status: ${character.status}</p>
-                <p>Species: ${character.species}</p>
-                <p>Gender: ${character.gender}</p>
-                <button class="open-btn" onclick="showModal('character', ${character.id})">Details</button>
+                <div class="image-container">
+                    <img src="${character.image}" alt="${character.name}">
+                    <div class="overlay"></div>
+                    <div class="text-overlay">
+                        <h2>${character.name}</h2>
+                        <button class="open-btn" onclick="showModal('character', ${character.id})">Details</button>
+                    </div>
+                </div>
             `;
             displayCharacter.appendChild(characterCard);
         });
@@ -142,8 +146,6 @@ async function fetchAndDisplayLocations(query) {
             locationCard.classList.add('cardLocation');
             locationCard.innerHTML = `
                 <h2>${location.name}</h2>
-                <p>Type: ${location.type}</p>
-                <p>Dimension: ${location.dimension}</p>
                 <button class="open-btn" onclick="showModal('location', ${location.id})">Details</button>
             `;
             displayLocations.appendChild(locationCard);
@@ -162,10 +164,9 @@ async function fetchAndDisplayEpisodes(query) {
             const episodeCard = document.createElement('div');
             episodeCard.classList.add('cardEpisode');
             episodeCard.innerHTML = `
-                <h2>${episode.name}</h2>
-                <p>Air Date: ${episode.air_date}</p>
-                <p>Episode: ${episode.episode}</p>
-                <button class="open-btn" onclick="showModal('episode', ${episode.id})">Details</button>
+                    <p>Episode: ${episode.episode}, ${episode.name}</summary>
+                    <button class="open-btn" onclick="showModal('episode', ${episode.id})">Details</button>
+
             `;
             displayEpisodes.appendChild(episodeCard);
         });
@@ -185,29 +186,30 @@ async function showModal(type, id) {
             modalContent.innerHTML = `
                 <h2>${data.name}</h2>
                 <img src="${data.image}" alt="${data.name}">
-                <p>Status: ${data.status}</p>
-                <p>Species: ${data.species}</p>
-                <p>Gender: ${data.gender}</p>
-                <p>Origin: ${data.origin.name}</p>
-                <p>Location: ${data.location.name}</p>
+                <strong><p>Status:</strong> ${data.status}</p>
+                <strong><p>Species:</strong> ${data.species}</p>
+                <strong><p>Gender:</strong> ${data.gender}</p>
+                <strong><p>Origin: </strong>${data.origin.name}</p>
+                <strong><p>Location: </strong>${data.location.name}</p>
+                
             `;
             break;
         case 'location':
             data = await fetchLocationById(id);
             modalContent.innerHTML = `
                 <h2>${data.name}</h2>
-                <p>Type: ${data.type}</p>
-                <p>Dimension: ${data.dimension}</p>
-                <p>Residents: ${data.residents.length}</p>
+                <strong><p>Type:</strong> ${data.type}</p>
+                <strong><p>Dimension:</strong> ${data.dimension}</p>
+                <strong><p>Residents:</strong> ${data.residents.length}</p>
             `;
             break;
         case 'episode':
             data = await fetchEpisodeById(id);
             modalContent.innerHTML = `
                 <h2>${data.name}</h2>
-                <p>Air Date: ${data.air_date}</p>
-                <p>Episode: ${data.episode}</p>
-                <p>Characters: ${data.characters.length}</p>
+                <strong><p>Air Date:</strong> ${data.air_date}</p>
+                <strong><p>Episode:</strong> ${data.episode}</p>
+                <strong><p>Characters:</strong> ${data.characters.length}</p>
             `;
             break;
     }
