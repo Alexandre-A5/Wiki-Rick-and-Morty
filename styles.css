@@ -1,164 +1,244 @@
+/* ... autres styles ... */
+
 body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color:#2e2e2e ;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#2e2e2e ;
 
-}
+  }
 
-body::after {
-  content: "";
-  background: url(asset/rickmortywllp.jpg);
-  background-size:cover;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}
-
-header {
-  background-color: #181818;
-  color: #fff;
-  padding: 1em;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-}
-
-header h1 {
-  margin: 0;
-  color:white;
-}
-
-.left-nav{
-  display: flex;
-  align-items: center;
-  transition :0.3s;
-}
+  body::after {
+    content: "";
+    background: url(asset/rickmortywllp.jpg);
+    background-size:cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+  
+  header {
+    background-color: #181818;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  header h1 {
+    margin: 0;
+    color:white;
+  }
+ 
+ .left-nav{
+    display: flex;
+    align-items: center;
+    transition :0.3s;
+ }
 .left-nav:hover{
-  color: #fff;
-  text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(0, 255, 38),
-    0 0 82px rgb(0, 255, 17),
-    0 0 92px rgb(0, 255, 34),
-    0 0 102px rgb(0, 255, 38),
-    0 0 151px rgb(0, 255, 115);
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(0, 255, 38),
+      0 0 82px rgb(0, 255, 17),
+      0 0 92px rgb(0, 255, 34),
+      0 0 102px rgb(0, 255, 38),
+      0 0 151px rgb(0, 255, 115);
 }
 
 .img-nav{
-  width: 5%;
-  margin:0 10px;
-  transition: 0.5s;
-  border-radius: 100%;
+    width: 5%;
+    margin:0 10px;
+    transition: 0.5s;
+    border-radius: 100%;
 }
-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.img-nav:hover{
+  filter: drop-shadow(1px 1px 1px 1px rgb(188, 255, 186));
+  filter: drop-shadow(0 0 0.75rem rgb(48, 255, 41));
 }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-}
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 2em;
+  }
+  
+  .nav-links li{
+    display: inline-block;
+    width: 100px;
+    transition: 0.2s;
+  }
 
-nav ul li {
-  margin-right: 2em;
-}
-
-.nav-links li{
-  display: inline-block;
-  width: 100px;
-  transition: 0.2s;
-}
-
-.nav-links li:hover{
-transform: scale(1.1);
-font-weight: bold;
-}
-
-
+ .nav-links li:hover{
+  transform: scale(1.1);
+  font-weight: bold;
+ }
 
 
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-.main-title{
-  color:white;
-  text-align: center;
-  font-size: 2em;
-}
 
-  #characters{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .main-title{
+    color:white;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+    #characters{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 #characters p{
-margin-top:100px;
-}
-.category-title{
   margin-top:100px;
-  color:white;
 }
-.main-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-main h2{
-  width: 100%;
-  text-align: center;
-}
-.home-content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-}
-
-a{
-  text-decoration: none;
-  color: white;
-}
-.cardCharacter{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin:20px 10px;
-  background-color: rgba(255, 241, 241, 0.884);
-  border-radius: 10px;
-
-  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.75);
-  color:black;
-  width: 250px;
-  transition: 200ms;
-}
-
-.cardCharacter:hover{
-  transform: scale(1.05);
-}
-.cardCharacter h2{
-  color:black;
-  text-align: left;
+  .category-title{
+    margin-top:100px;
+    color:white;
+  }
+  .main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  main h2{
+    width: 100%;
+    text-align: center;
+  }
+  .home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
   
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .cardCharacter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:20px 10px;
+    background-color: rgba(255, 241, 241, 0.884);
+    border-radius: 10px;
+  
+    box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.75);
+    color:black;
+    width: 250px;
+    transition: 200ms;
+  }
+
+  .cardCharacter:hover{
+    transform: scale(1.05);
+  }
+  .cardCharacter h2{
+    color:black;
+    text-align: left;
+    
+  }
+  .cardCharacter img{
+    box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.75);
+    width: 100%;
+  }
+  .cardCharacter button{
+      width: 100%;
+      margin-top:5px;
+      background-color: black;
+      color:white;
+      border:none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 0.6em;
+      cursor: pointer;
+      border-radius: 5px;
+  
+  }
+
+  .image-container {
+    position: relative;
+    
 }
-.cardCharacter img{
-  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.75);
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintient le ratio de l'image */
+    display: block;
+    
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.996) 100%);
+  z-index: 1; /* Assure que le dégradé se trouve au-dessus de l'image mais en dessous du texte */
 }
-.cardCharacter button{
+
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff; /* Couleur du texte */
+    width: 100%;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    padding:0px 10px;
+    z-index: 3;
+}
+
+.text-overlay h2 {
+    margin: 10px 0;
+    font-size: 1em; /* Ajustez la taille de police si nécessaire */
+    color:white;
+
+}
+
+#locations{
+    display: flex;
+    flex-wrap:wrap;
+
+    justify-content: space-evenly;
+}
+#locations p{
+  color:black;
+}
+
+  .cardLocation{
+    width: 300px;
+    text-align: left;
+    margin:20px 10px;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-radius: 10px;
+    padding:0px 20px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .cardLocation button{
     width: 100%;
     margin-top:5px;
     background-color: black;
@@ -166,175 +246,105 @@ a{
     border:none;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    font-size: 0.6em;
     cursor: pointer;
     border-radius: 5px;
-
-}
-
-.image-container {
-  position: relative;
+  }
   
-}
+  .cardLocation p{
+    color:rgb(0, 0, 0);
+    text-align: left;
+  }
+ .cardLocation h2{
+    text-align: left;
+ }
+ 
+ .cardEpisode{
+    width:500px;
+    text-align: left;
+    margin:5px 10px;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-radius: 10px;
+    padding:10px 20px;
+    overflow:hidden;
 
-.image-container img {
-  width: 100%;
-  height: auto; /* Maintient le ratio de l'image */
-  display: block;
+  }
+
+  .cardEpisode summary{
+    color:black;
+  }
+  .cardEpisode button{
+    width: 100%;
+    margin-top:5px;
+    background-color: black;
+    color:white;
+    border:none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .cardEpisode p{
+    font-size: 1.5em;
+    margin:0;
+  }
+  #search-button{
+    color:rgb(19, 81, 0);
+    font-weight: bold;
+  }
   
-}
-.overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.996) 100%);
-z-index: 1; /* Assure que le dégradé se trouve au-dessus de l'image mais en dessous du texte */
-}
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .search-container p{
+    color:white;
+    width: 60%;
+    text-align: center;
+    margin:30px 0;
+  }
+  .search-wrapper{
+    display: flex;
+    justify-content: center;
+    width:50%;
+  }
+  
+  .search-container h2 {
+    margin-top:50px
+  }
+  
+  .search-container input[type="text"] {
+    width: 50%;
+    padding: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  .search-container button {
+    padding: 0.5em 1em;
+    background-color: rgb(13, 237, 13);
+    border:none;
+    border-radius: 5px;
+    cursor:pointer
+  }
+  
+  #episodes{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.text-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: #fff; /* Couleur du texte */
-  width: 100%;
-  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-  padding:0px 10px;
-  z-index: 3;
-}
-
-.text-overlay h2 {
-  margin: 10px 0;
-  font-size: 1em; /* Ajustez la taille de police si nécessaire */
-  color:white;
-
-}
-
-#locations{
-  display: flex;
-  flex-wrap:wrap;
-
-  justify-content: space-evenly;
-}
-#locations p{
-color:black;
-}
-
-.cardLocation{
-  width: 300px;
-  text-align: left;
-  margin:20px 10px;
-  background-color: rgba(255, 255, 255, 0.836);
-  border-radius: 10px;
-  padding:0px 20px;
-  overflow: hidden;
-  padding: 10px;
-}
-.cardLocation button{
-  width: 100%;
-  margin-top:5px;
-  background-color: black;
-  color:white;
-  border:none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.cardLocation p{
-  color:rgb(0, 0, 0);
-  text-align: left;
-}
-.cardLocation h2{
-  text-align: left;
-}
-
-.cardEpisode{
-  width:500px;
-  text-align: left;
-  margin:5px 10px;
-  background-color: rgba(255, 255, 255, 0.836);
-  border-radius: 10px;
-  padding:10px 20px;
-  overflow:hidden;
-
-}
-
-.cardEpisode summary{
-  color:black;
-}
-.cardEpisode button{
-  width: 100%;
-  margin-top:5px;
-  background-color: black;
-  color:white;
-  border:none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.cardEpisode p{
-  font-size: 1.5em;
-  margin:0;
-}
-
-.search-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-container p{
-  color:white;
-  width: 60%;
-  text-align: center;
-  margin:30px 0;
-}
-.search-wrapper{
-  display: flex;
-  justify-content: center;
-  width:50%;
-}
-
-.search-container h2 {
-  margin-top:50px
-}
-
-.search-container input[type="text"] {
-  width: 50%;
-  padding: 0.5em;
-  margin-right: 0.5em;
-}
-
-.search-container button {
-  padding: 0.5em 1em;
-  background-color: rgb(13, 237, 13);
-  border:none;
-  border-radius: 5px;
-  cursor:pointer
-}
-
-#episodes{
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-#episodes p{
-  color:rgb(0, 0, 0);
-}
+  }
+  #episodes p{
+    color:rgb(0, 0, 0);
+  }
 
 .cardEpisode h2 , p{
-  text-align: left;
-  color:black;
-}
+    text-align: left;
+    color:black;
+  }
 
 
 
@@ -342,49 +352,95 @@ color:black;
 
 /* Style pour la fenêtre modale */
 .modal {
-  display: none; /* Cacher la modale par défaut */
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.815); /* Griser le fond */
-  justify-content: center;
-  align-items: center;
+    display: none; /* Cacher la modale par défaut */
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.815); /* Griser le fond */
+    justify-content: center;
+    align-items: center;
 }
 
 #modal-body p{
-margin :10px 0;
-text-shadow: 2px 2px 2px #00000071;
+  margin :10px 0;
+  color:white;
+  text-shadow: 1px 1px 1px #000000;
+}
+#modal-body h2{
+  color:white;
+  text-shadow: 1px 1px 1px #000000;
 }
 #modal-body{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .modal-content {
-  background-image: url("/asset/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
-  background-color: #ffffffe4;
-  margin:0;
-  padding: 20px;
-  border: 1px solid #000000;
-  width: 30%; /* Largeur de la modale */
-  max-width: 600px; /* Largeur maximale */
-  position: relative;
-  border-radius: 5%;
+    background-image: url("/asset/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
+    background-color: #ffffffe4;
+    margin:0;
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 30%; /* Largeur de la modale */
+    max-width: 600px; /* Largeur maximale */
+    position: relative;
+    border-radius: 5%;
+    height: 90vh;
 }
 
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #e6e6e6;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*----------------------------*/
+/* Style pour le chargement*/
+
+
+.hidden {
+  display: none;
+}
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#loader p{
+  color:white;
+  font-weight: bold;
+}
+.loader-1 {
+  width: 76px;
+  height: 76px;
+  border: 5px solid rgba(255, 255, 255, 0);
+  filter: drop-shadow(0 0 10px #15ff00);
+  border-bottom-color: #93ff89;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
