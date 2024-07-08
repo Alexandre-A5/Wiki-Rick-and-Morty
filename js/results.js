@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     const modalContent = document.getElementById('modal-body');
     const closeBtn = document.querySelector('.close');
+    const loader = document.getElementById('loader');
 
     const closeModal = () => {
         modal.style.display = 'none';
@@ -19,22 +20,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const showLoader = () => {
+        loader.classList.remove('hidden');
+    };
+
+    const hideLoader = () => {
+        loader.classList.add('hidden');
+    };
+
     if (type) {
+        showLoader();
         switch (type) {
             case 'characters':
-                fetchAndDisplayCharacters(query);
+                fetchAndDisplayCharacters(query).then(hideLoader);
                 break;
             case 'locations':
-                fetchAndDisplayLocations(query);
+                fetchAndDisplayLocations(query).then(hideLoader);
                 break;
             case 'episodes':
-                fetchAndDisplayEpisodes(query);
+                fetchAndDisplayEpisodes(query).then(hideLoader);
                 break;
+            default:
+                hideLoader();
         }
     } else if (query) {
-        performSearchCharacter(query);
-        performSearchLocation(query);
-        performSearchEpisode(query);
+        performSearchCharacter(query).then(hideLoader);
+        performSearchLocation(query).then(hideLoader);
+        performSearchEpisode(query).then(hideLoader);
     }
 });
 async function performSearchCharacter(query) {
